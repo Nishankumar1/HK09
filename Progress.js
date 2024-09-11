@@ -6,8 +6,14 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
 
     let currentVideoIndex = 0;
-
     const nextButton = document.getElementById('nextButton');
+    const quizButton = document.createElement('button');
+    quizButton.textContent = 'Take Quiz';
+    quizButton.id = 'quizButton';
+    quizButton.style.display = 'none';
+    quizButton.classList.add('next-button');
+
+    document.body.appendChild(quizButton);
 
     function updateProgress(item) {
         const percentage = (item.video.currentTime / item.video.duration) * 100;
@@ -18,6 +24,11 @@ document.addEventListener('DOMContentLoaded', function () {
         videos[currentVideoIndex].check.classList.add('active');
         nextButton.disabled = false;
         nextButton.classList.add('enabled');
+
+        if (videos.every(v => v.check.classList.contains('active'))) {
+            nextButton.style.display = 'none';
+            quizButton.style.display = 'inline-block'; 
+        }
     }
 
     function switchToNextVideo() {
@@ -30,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    videos.forEach((item, index) => {
+    videos.forEach((item) => {
         item.video.addEventListener('timeupdate', function () {
             updateProgress(item);
         });
@@ -42,5 +53,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     nextButton.addEventListener('click', function () {
         switchToNextVideo();
+    });
+
+    quizButton.addEventListener('click', function () {
+        window.location.href = 'quiz.html'; 
     });
 });

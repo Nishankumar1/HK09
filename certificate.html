@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate</title>
+    <link rel="stylesheet" href="certificate.css">
+</head>
+<body>
+    <div class="certificate-container">
+        <h1>Congratulations!</h1>
+        <p>Please enter your name:</p>
+        <input type="text" id="studentName" placeholder="Your Name">
+        <button id="generateCertificate">Generate Certificate</button>
+
+        <div id="certificate" class="certificate" style="display: none;">
+            <h2>Certificate of Completion</h2>
+            <p>This certifies that</p>
+            <h3 id="studentNameDisplay" style="color: white;"></h3> <!-- Name in white -->
+            <p>has successfully completed the course.</p>
+        </div>
+    </div>
+
+    <script src="certificate.js"></script>
+</body>
+</html>
