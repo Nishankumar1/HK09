@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Progression</title>
+    <link rel="stylesheet" href="Progress.css">
+</head>
+<body>
+    <div class="progress-container">
+        <table>
+            <tr>
+                <td>Video 1:</td>
+                <td><div class="progress-bar"><div class="progress-fill" id="progress1"></div></div></td>
+                <td><span id="check1" class="checkmark">✔</span></td>
+            </tr>
+            <tr>
+                <td>Video 2:</td>
+                <td><div class="progress-bar"><div class="progress-fill" id="progress2"></div></div></td>
+                <td><span id="check2" class="checkmark">✔</span></td>
+            </tr>
+            <tr>
+                <td>Video 3:</td>
+                <td><div class="progress-bar"><div class="progress-fill" id="progress3"></div></div></td>
+                <td><span id="check3" class="checkmark">✔</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="video-container">
+        <video id="video1" width="600" controls>
+            <source src="HTML.mp4" type="video/mp4">
+        </video>
+
+        <video id="video2" width="600" controls style="display: none;">
+            <source src="CSS.mp4" type="video/mp4">
+        </video>
+
+        <video id="video3" width="600" controls style="display: none;">
+            <source src="JS.mp4" type="video/mp4">
+        </video>
+
+        <button id="nextButton" class="next-button" disabled>Next</button>
+    </div>
+
+    <script src="Progress.js"></script>
+</body>
+</html>
