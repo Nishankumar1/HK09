@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <div class="container">
+        <div id="signupSection">
+            <h1>Sign-up Form</h1>
+            <form id="signupForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="button" id="signupButton">Sign Up</button>
+            </form>
+        </div>
+
+        <div id="profilePage" style="display: none;">
+            <h1>Profile Page</h1>
+            <p id="profileName"></p>
+            <p id="profileEmail"></p>
+            <p id="profilePhone"></p>
+        </div>
+    </div>
+
+    <script src="signin.js"></script>
+</body>
+</html>
