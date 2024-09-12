@@ -4,23 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificate</title>
-    <link rel="stylesheet" href="certificate.css">
+    <style>
+        body {
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .certificate {
+            background: url('./certificate.png') no-repeat center center;
+            background-size: cover;
+            width: 800px;
+            height: 600px;
+            margin: 50px auto;
+            position: relative;
+        }
+        .name {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 36px;
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
 </head>
 <body>
-    <div class="certificate-container">
-        <h1>Congratulations!</h1>
-        <p>Please enter your name:</p>
-        <input type="text" id="studentName" placeholder="Your Name">
-        <button id="generateCertificate">Generate Certificate</button>
-
-        <div id="certificate" class="certificate" style="display: none;">
-            <h2>Certificate of Completion</h2>
-            <p>This certifies that</p>
-            <h3 id="studentNameDisplay" style="color: white;"></h3> <!-- Name in white -->
-            <p>has successfully completed the course.</p>
-        </div>
+    <div class="certificate">
+        <div class="name" id="userName"></div>
     </div>
 
-    <script src="certificate.js"></script>
+    <script>
+        const userName = localStorage.getItem('userName');
+        if (userName) {
+            document.getElementById('userName').textContent = userName;
+        } else {
+            document.getElementById('userName').textContent = 'Your Name'; 
+        }
+    </script>
 </body>
 </html>

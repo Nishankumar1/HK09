@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>JavaScript Quiz</h1>
+        <form id="quizForm">
+           
+            <div class="question">
+                <p>1. Which type of JavaScript language is ___</p>
+                <label><input type="radio" name="q1" value="wrong"> Object-Oriented</label><br>
+                <label><input type="radio" name="q1" value="correct"> Object-Based</label><br>
+                <label><input type="radio" name="q1" value="wrong"> Assembly-language</label><br>
+                <label><input type="radio" name="q1" value="wrong"> High-level</label>
+            </div>
+
+            <div class="question">
+                <p>2. Which one of the following is also known as Conditional Expression:</p>
+                <label><input type="radio" name="q2" value="wrong"> Alternative to if-else</label><br>
+                <label><input type="radio" name="q2" value="wrong"> Switch statement</label><br>
+                <label><input type="radio" name="q2" value="wrong"> If-then-else statement</label><br>
+                <label><input type="radio" name="q2" value="correct"> immediate if</label>
+            </div>
+
+            <div class="question">
+                <p>3. In JavaScript, what is a block of statement?</p>
+                <label><input type="radio" name="q3" value="wrong"> Conditional block</label><br>
+                <label><input type="radio" name="q3" value="correct"> block that combines a number of statements into a single compound statement</label><br>
+                <label><input type="radio" name="q3" value="wrong"> both conditional block and a single statement</label><br>
+                <label><input type="radio" name="q3" value="wrong"> block that contains a single statement</label>
+            </div>
+
+            <div class="question">
+                <p>4. When interpreter encounters an empty statement, what will it do?</p>
+                <label><input type="radio" name="q4" value="wrong"> Shows a warning</label><br>
+                <label><input type="radio" name="q4" value="wrong"> Prompts to complete the statement</label><br>
+                <label><input type="radio" name="q4" value="wrong"> Throws an error</label><br>
+                <label><input type="radio" name="q4" value="correct"> Ignores the statement</label>
+            </div>
+
+            <div class="question">
+                <p>5. The "function" and "var" are known as:</p>
+                <label><input type="radio" name="q5" value="correct"> Keywords</label><br>
+                <label><input type="radio" name="q5" value="wrong"> Data types</label><br>
+                <label><input type="radio" name="q5" value="wrong"> Declaration statements</label><br>
+                <label><input type="radio" name="q5" value="wrong"> Prototypes</label>
+            </div>
+
+            <div class="question">
+                <p>6. Which one of the following is the correct way for calling the JavaScript code?</p>
+                <label><input type="radio" name="q6" value="wrong"> Preprocessor</label><br>
+                <label><input type="radio" name="q6" value="wrong"> Triggering Event</label><br>
+                <label><input type="radio" name="q6" value="wrong"> RMI</label><br>
+                <label><input type="radio" name="q6" value="correct"> Function/Method</label>
+            </div>
+
+            <div class="question">
+                <p>7. Which of the following type of a variable is volatile?</p>
+                <label><input type="radio" name="q7" value="correct"> Mutable variable</label><br>
+                <label><input type="radio" name="q7" value="wrong"> Dynamic variable</label><br>
+                <label><input type="radio" name="q7" value="wrong"> Volatile variable</label><br>
+                <label><input type="radio" name="q7" value="wrong"> Immutable variable</label>
+            </div>
+
+            <div class="question">
+                <p>8. Which of the following option is used as hexadecimal literal beginning?</p>
+                <label><input type="radio" name="q8" value="wrong"> 00</label><br>
+                <label><input type="radio" name="q8" value="correct"> 0x</label><br>
+                <label><input type="radio" name="q8" value="wrong"> 0X</label><br>
+                <label><input type="radio" name="q8" value="wrong"> Both 0x and 0</label>
+            </div>
+
+            <div class="question">
+                <p>9. When there is an indefinite or an infinite value during an arithmetic computation in a program, then JavaScript prints______.</p>
+                <label><input type="radio" name="q9" value="wrong"> Prints an exception error</label><br>
+                <label><input type="radio" name="q9" value="wrong"> Prints an overflow error</label><br>
+                <label><input type="radio" name="q9" value="correct"> Displays "Infinity"</label><br>
+                <label><input type="radio" name="q9" value="wrong"> Prints the value as such</label>
+            </div>
+
+            <div class="question">
+                <p>10. In JavaScript, which one of the following is not considered as an error:</p>
+                <label><input type="radio" name="q10" value="wrong"> Syntax error</label><br>
+                <label><input type="radio" name="q10" value="wrong"> Missing of semicolons</label><br>
+                <label><input type="radio" name="q10" value="correct"> Division by zero</label><br>
+                <label><input type="radio" name="q10" value="wrong"> Missing of Bracket</label>
+            </div>
+
+            <button type="button" id="finishQuiz">Finish Quiz</button>
+        </form>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
