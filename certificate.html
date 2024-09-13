@@ -7,7 +7,7 @@
     <style>
         body {
             text-align: center;
-            background-color: #f4f4f4;
+            background:linear-gradient(135deg, #83a4d4, #b6fbff);
         }
         .certificate {
             background: url('./certificate.png') no-repeat center center;
@@ -26,11 +26,35 @@
             color: white;
             font-family: 'Arial', sans-serif;
         }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            grid-gap: 20px;
+            justify-content: center;
+            margin: 20px auto;
+        }
+        .image-gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
     <div class="certificate">
         <div class="name" id="userName"></div>
+    </div>
+
+    <div class="image-gallery">
+        <img src="wipro.png" alt="Image 1">
+        <img src="google.png" alt="Image 2">
+        <img src="ibm.png" alt="Image 3">
+        <img src="tcs.png" alt="Image 4">
+        <img src="infos.png" alt="Image 5">
+        <img src="Acc.png" alt="Image 6">
     </div>
 
     <script>

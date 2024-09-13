@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Tracker</title>
+    <link rel="stylesheet" href="kalpita.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<header>Interest Tracker</header>
+<body>
+   
+    <div class="button-container">
+        <button onclick="generateRandomValue(1)">Computer science</button>
+        <button onclick="generateRandomValue(2)">Electrical</button>
+        <button onclick="generateRandomValue(3)">Mechanical</button>
+        <button onclick="generateRandomValue(4)">Robotics</button>
+        <button onclick="generateRandomValue(5)">Aerospace</button>
+        <button onclick="generateRandomValue(6)">Medical</button>
+    </div>
+    <h2>Scores:</h2>
+    <ul id="scoreList">
+        <li>Computer science: 0</li>
+        <li>Electrical: 0</li>
+        <li>Mechanical: 0</li>
+        <li>Robotics: 0</li>
+        <li>Aerospace: 0</li>
+        <li>Medical: 0</li>
+    </ul>
+    <h2>Score Graph:</h2>
+    <canvas id="scoreChart" width="300" height="150"></canvas>
+
+    <div id="maxScoreModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="maxScoreMessage"></p>
+            <a id="modalLink" href="#" target="_blank">Go to new page</a>
+        </div>
+    </div>
+
+    <script src="kalpita.js"></script>
+</body>
+<footer>footer</footer>
+</html>

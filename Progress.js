@@ -56,6 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     quizButton.addEventListener('click', function () {
-        window.location.href = 'quiz.html'; 
+        window.location.href = 'quiz_html.html'; 
     });
 });

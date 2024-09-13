@@ -1,56 +1,37 @@
-// Main index page - opening tabs for User 1 and User 2
 document.addEventListener('DOMContentLoaded', function () {
-    const user1Btn = document.getElementById('user1Btn');
-    const user2Btn = document.getElementById('user2Btn');
+    const user1ChatBox = document.getElementById('user1ChatBox');
+    const user1Input = document.getElementById('user1Input');
+    const user1Send = document.getElementById('user1Send');
+    
+    const user2ChatBox = document.getElementById('user2ChatBox');
+    const user2Input = document.getElementById('user2Input');
+    const user2Send = document.getElementById('user2Send');
 
-    user1Btn.addEventListener('click', function () {
-        window.open('user.html?user=1', '_blank', 'width=400,height=400');
-    });
-
-    user2Btn.addEventListener('click', function () {
-        window.open('user.html?user=2', '_blank', 'width=400,height=400');
-    });
-});
-
-// User chat page functionality
-document.addEventListener('DOMContentLoaded', function () {
-    const urlParams = new URLSearchParams(window.location.search);
-    const user = urlParams.get('user'); // Get the user (either 1 or 2)
-    const chatBox = document.getElementById('chatBox');
-    const messageInput = document.getElementById('messageInput');
-    const sendBtn = document.getElementById('sendBtn');
-
-    // Function to update chat from localStorage
-    function updateChat() {
-        const chatHistory = localStorage.getItem('chatHistory');
-        chatBox.innerHTML = chatHistory ? chatHistory : '';
+    
+    function updateChats(message, user) {
+        const formattedMessage = `<p><strong>${user}:</strong> ${message}</p>`;
+        if (user === "User 1") {
+            user1ChatBox.innerHTML += formattedMessage;
+            user2ChatBox.innerHTML += formattedMessage;
+        } else {
+            user2ChatBox.innerHTML += formattedMessage;
+            user1ChatBox.innerHTML += formattedMessage;
+        }
     }
-
-    // Update the chat box when the page loads
-    updateChat();
-
-    // Listen for new messages from other tabs
-    window.addEventListener('storage', function () {
-        updateChat();
+   
+    user1Send.addEventListener('click', function () {
+        const message = user1Input.value;
+        if (message.trim()) {
+            updateChats(message, "Expert");
+            user1Input.value = '';
+        }
     });
 
-    // Send message
-    sendBtn.addEventListener('click', function () {
-        const message = messageInput.value;
+    user2Send.addEventListener('click', function () {
+        const message = user2Input.value;
         if (message.trim()) {
-            const currentTime = new Date().toLocaleTimeString();
-            const formattedMessage = `<p><strong>User ${user}:</strong> ${message} <small>${currentTime}</small></p>`;
-            
-            // Get existing chat history and append new message
-            let chatHistory = localStorage.getItem('chatHistory') || '';
-            chatHistory += formattedMessage;
-            localStorage.setItem('chatHistory', chatHistory);
-
-            // Update the chat box
-            updateChat();
-
-            // Clear the message input
-            messageInput.value = '';
+            updateChats(message, "Learner");
+            user2Input.value = '';
         }
     });
 });
